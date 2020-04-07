@@ -8,6 +8,16 @@ class tourist_controller {
     private int tourists_on_gondola = 0;
     private int tourists_at_top = 0;
     private int tourists_waiting_top = 0;
+    private int down_counter = 0;
+
+    public int getDown_counter() {
+        return down_counter;
+    }
+
+    public void setDown_counter(int down_counter) {
+        this.down_counter = down_counter;
+    }
+
     Semaphore gondola_spaces = new Semaphore(10);
     Semaphore top_spaces = new Semaphore(50);
 

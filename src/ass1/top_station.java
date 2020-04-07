@@ -4,7 +4,7 @@ public class top_station implements Runnable {
     private final ass1.tourist_controller tourist_controller;
     int counter = 0;
 
-    void increment_counter(){
+    public void increment_counter(){
         counter += 1;
     }
 
@@ -19,8 +19,7 @@ public class top_station implements Runnable {
             int t_a_t_q = tourist_controller.getTourists_waiting_top();
             tourist_controller.setTourists_at_top(t_a_t - 1);
             tourist_controller.setTourists_waiting_top(t_a_t_q + 1);
-            System.out.println("A tourist is waiting to get down");
-            increment_counter();
+            System.out.println( tourist_controller.getTourists_waiting_top() +" tourists are waiting to get down");
         }
 
     }
@@ -29,7 +28,7 @@ public class top_station implements Runnable {
     public void run() {
         System.out.println("Created " + Thread.currentThread().getName());
         //TODO set to 500
-        while  (counter <= 20){
+        while  (tourist_controller.getDown_counter() < 500){
             try{
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
