@@ -1,0 +1,6 @@
+I have three threads so far.
+The base station one that makes 500 tourists then shuts down. These tourists are tracked by the tourist_counter object.
+What I need to do is implement the gondola and top threads.
+The gondola thread needs to try acquire permits for both spaces on the gondola and the 50 spaces at the top of the mountain.
+It will ferry people from the bottom to the top, then the top to the bottom.
+Ive got the top station to move people from the top to the getting down queue
