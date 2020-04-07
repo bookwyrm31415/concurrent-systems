@@ -31,17 +31,15 @@ public class Erebor {
 
 
 
-
+        tourist_controller.setTourists_at_top(20);
 
 
         while (top_station_thread.isAlive()){
 
 //            gondola.tryAcquire(10,1,TimeUnit.SECONDS);
 //            gondola.tryAcquire(10,1,TimeUnit.SECONDS);
-            tourist_controller.setTourists_at_top(20);
-            for ( int i = 0; i <20 ;i++){
-                top_station.top_to_queue();
-            }
+
+
 
 
         }

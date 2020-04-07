@@ -13,17 +13,23 @@ class gondola implements Runnable{
 
 
     public boolean tryAcquire(int permits, long timeout, TimeUnit unit) throws InterruptedException{
-
+    //timeout?
 
         return true;
     }
 
 
-
-
+//TODO
+//get permits for gondola spaces and spaces at the top
+//move people from bottom to top
+// release gondola permits
+//get permits for gondola spaces
+//move people from top to gone    (make sure ti increase top_station.counter)
+// release gondola and top space permits
 
     @Override
     public void run() {
         System.out.println("Created " + Thread.currentThread().getName());
+
     }
 }
